@@ -77,7 +77,7 @@ dataPoints !n = n : dataPoints (n*10)
 --
 
 benchGroup size = bgroup (show size) [
-                   --bench "Haskell HMatrix" $ nf hMatrixAddition size
+                   -- bench "Haskell HMatrix" $ nf hMatrixAddition size
                    bench "Haskell Vector seq" $  nf vectorAddition size
                    --, bench "Haskell Vector par" $  whnf vectorAdditionPar size
                    --, bench "Haskell Repa seq" $ whnf sRepaAddition size

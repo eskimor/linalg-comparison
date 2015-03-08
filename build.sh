@@ -1,4 +1,4 @@
 #!/bin/bash
 g++ -Icpp -c -O3 cpp/cppVersion.cpp; cp cppVersion.o cpp/
 cabal build
-./dist/build/linalg-comparison/linalg-comparison --output report.html +RTS -G1 -A100M -RTS
+./dist/build/linalg-comparison/linalg-comparison --output report.html +RTS -G1 -A100M -N -RTS

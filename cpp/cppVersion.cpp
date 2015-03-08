@@ -8,12 +8,11 @@ extern "C" {
         std::vector<scalarT> input(size);
         for (size_t i=0; i<input.size(); ++i)
             input[i] = i;
-        viennacl::vector<scalarT> calc(size);
-        copy(input.begin(), input.end(), calc.begin());
-        viennacl::vector<scalarT> result(size);
-        result = calc + calc;
         std::vector<scalarT> output(size);
-        copy(result.begin(), result.end(), output.begin());
+        for (size_t i=0; i<input.size(); ++i) {
+            output[i] = input[i] + input[i];
+        }
+             
         //       return output;
     }
 }
