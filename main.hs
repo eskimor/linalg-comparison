@@ -6,7 +6,7 @@ import Criterion.Main
 import qualified Data.Array.Repa as R
 import Data.Array.Repa (Z(..), fromFunction, fromListUnboxed)
 import Foreign.C.Types
-import qualified Data.Vector as V
+import qualified Data.Vector.Unboxed as V
 import Control.Applicative
 import Control.Parallel.Strategies
 import Control.Monad (forever)
