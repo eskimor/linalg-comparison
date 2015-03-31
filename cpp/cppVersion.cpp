@@ -5,14 +5,11 @@ typedef double scalarT;
 
 extern "C" {
     void cppAdditionImpl(int size) {
-        std::vector<scalarT> input(size);
-        for (size_t i=0; i<input.size(); ++i)
-            input[i] = i;
-        std::vector<scalarT> output(size);
-        for (size_t i=0; i<input.size(); ++i) {
-            output[i] = input[i] + input[i];
-        }
-             
+        viennacl::vector<scalarT> calc(size);
+        for (size_t i=0; i<calc.size(); ++i)
+            calc[i] = i;
+        viennacl::vector<scalarT> result(size);
+        result = calc + calc;
         //       return output;
     }
 }
